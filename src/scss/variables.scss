@@ -1,0 +1,42 @@
+$prime: #ff6e48;
+$ciBlue: #00fff1;
+$ciRed: #ff00aa;
+$ciGreen: #46fcb4;
+$ciWhite: #ffffff;
+$second: #2C3639;
+$border: #A27B5C;
+$ciGrey: darken(
+  $color: $ciWhite,
+  $amount: 40%,
+);
+
+$roboto: "Roboto", sans-serif;
+$raleway: "Raleway", sans-serif;
+
+$screen-mid: 768px;
+$screen-normal: 992px;
+$screen-large: 1200px;
+
+@mixin small {
+  @media (max-width: #{$screen-mid}) {
+    @content;
+  }
+}
+
+@mixin mid {
+  @media (min-width: #{$screen-mid}) {
+    @content;
+  }
+}
+
+@mixin normal {
+  @media (min-width: #{$screen-normal}) {
+    @content;
+  }
+}
+
+@mixin large  {
+  @media (min-width: #{$screen-large}) {
+    @content;
+  }
+}
